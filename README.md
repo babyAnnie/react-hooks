@@ -1,6 +1,6 @@
 # react hooks
 
-- **<font color='#C0FF3E'>useReactive</font>**
+## :bulb: useReactive
 
 useState 封装，具备响应式
 
@@ -20,7 +20,7 @@ const state = useReactive<any>({
 })
 ```
 
-- **<font color='#C0FF3E'>useTimeout</font>**
+## :bulb: useTimeout
 
 setTimeout 的封装 （一段时间内，执行一次）
 
@@ -30,7 +30,7 @@ useTimeout(() => {
 }, 1000)
 ```
 
-- **<font color='#C0FF3E'>useUnmount</font>**
+## :bulb: useUnmount
 
 useEffect 的封装，实现 componentWillUnmount 功能
 
@@ -40,7 +40,7 @@ useUnmount(() => {
 })
 ```
 
-- **<font color='#C0FF3E'>useUpdate</font>**
+## :bulb: useUpdate
 
 useCallback 的封装，强制更新组件
 
@@ -48,7 +48,7 @@ useCallback 的封装，强制更新组件
 const update = useUpdate();
 ```
 
-- **<font color='#C0FF3E'>useCountDown</font>**
+## :bulb: useCountDown
 
 useLatest, useState, useEffect, useMemo的封装，简单控制倒计时的钩子
 
@@ -59,7 +59,7 @@ const [_, formattedRes] = useCountDown({
 const { days, hours, minutes, seconds, milliseconds } = formattedRes;
 ```
 
-- **<font color='#C0FF3E'>useCreation</font>**
+## :bulb: useCreation
 
 useMemo 和 useRef 的封装加强版，让这个钩子可以替换这两个钩子。
 
@@ -67,7 +67,7 @@ useMemo 和 useRef 的封装加强版，让这个钩子可以替换这两个钩�
 const nowData = useCreation(() => {}, []);
 ```
 
-- **<font color='#C0FF3E'>useEventListener</font>**
+## :bulb: useEventListener
 
 addEventListener 和 useEffect, useRef 的封装，监听各种事件 （如：监听点击事件、键盘事件、滚动事件等，就是在addEventListener的基础上进行封装）
 
@@ -75,7 +75,7 @@ addEventListener 和 useEffect, useRef 的封装，监听各种事件 （如：�
 useEventListener('click', () => setCount(v => v + 1), ref)
 ```
 
-- **<font color='#C0FF3E'>useHover</font>**
+## :bulb: useHover
 
 useState 和 useEventListener 的封装，监听 DOM 元素是否有鼠标悬停
 
@@ -90,7 +90,7 @@ const h = useHover(r, {
 })
 ```
 
-- **<font color='#C0FF3E'>useInterval</font>**
+## :bulb: useInterval
 
 setInterval 的封装，每过一段时间内一直执行
 
@@ -101,7 +101,7 @@ useInterval(() => {
 }, 1000)
 ```
 
-- **<font color='#C0FF3E'>useLatest</font>**
+## :bulb: useLatest
 
 useRef 的封装，可以拿到最新值。好处：可以随时确保获取的是最新值，并且也可以解决闭包问题
 
@@ -110,7 +110,7 @@ useRef 的封装，可以拿到最新值。好处：可以随时确保获取的�
 const fnRef = useLatest(fn)
 ```
 
-- **<font color='#C0FF3E'>useMount</font>**
+## :bulb: useMount
 
 useEffect 的封装，实现 componentDidMount 功能。
 
@@ -121,7 +121,7 @@ useMount(() => {
 });
 ```
 
-- **<font color='#C0FF3E'>usePow</font>**
+## :bulb: usePow
 
 useMemo 的封装，平方功能。useMemo（减少性能开销） 第一个参数是函数，第二个参数参数是可变的数组。
 
