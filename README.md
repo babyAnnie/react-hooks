@@ -2,7 +2,7 @@
 
 ## :bulb: useReactive
 
-`useState` 封装，具备响应式
+`useState` 封装，使变量具备响应式。
 
 ```js
 const state = useReactive<any>({
@@ -22,7 +22,7 @@ const state = useReactive<any>({
 
 ## :bulb: useTimeout
 
-`setTimeout` 的封装 （一段时间内，执行一次）
+`setTimeout` 的封装，在一段时间内执行一次函数。
 
 ```js
 useTimeout(() => {
@@ -32,7 +32,7 @@ useTimeout(() => {
 
 ## :bulb: useUnmount
 
-`useEffect` 的封装，实现 `componentWillUnmount` 功能
+`useEffect` 的封装，实现 `componentWillUnmount` 功能。
 
 ```js
 useUnmount(() => {
@@ -42,7 +42,7 @@ useUnmount(() => {
 
 ## :bulb: useUpdate
 
-`useCallback` 的封装，强制更新组件
+`useCallback` 的封装，使组件强制更新。
 
 ```js
 const update = useUpdate();
@@ -50,7 +50,7 @@ const update = useUpdate();
 
 ## :bulb: useCountDown
 
-`useLatest`, `useState`, `useEffect`, `useMemo` 的封装，简单控制倒计时的钩子
+`useLatest`, `useState`, `useEffect`, `useMemo` 的封装，可以简单控制倒计时。
 
 ```js
 const [_, formattedRes] = useCountDown({
@@ -61,7 +61,10 @@ const { days, hours, minutes, seconds, milliseconds } = formattedRes;
 
 ## :bulb: useCreation
 
-`useMemo` 和 `useRef` 的封装加强版，让这个钩子可以替换这两个钩子。
+`useMemo` 和 `useRef` 的封装加强版，可以替换这两个钩子。
+
+- `useMemo` 的值不一定是最新的值，但 `useCreation` 可以保证拿到的值一定是最新的值
+- 对于复杂常量的创建， `useRef` 容易出现潜在的的性能隐患，但 `useCreation` 可以避免
 
 ```js
 const nowData = useCreation(() => {}, []);
@@ -69,7 +72,7 @@ const nowData = useCreation(() => {}, []);
 
 ## :bulb: useEventListener
 
-`addEventListener` 和 `useEffect`, `useRef` 的封装，监听各种事件 （如：监听点击事件、键盘事件、滚动事件等）
+`addEventListener` 和 `useEffect`, `useRef` 的封装，可以监听各种事件 （如：监听点击事件、键盘事件、滚动事件等）。
 
 ```js
 useEventListener('click', () => setCount(v => v + 1), ref)
@@ -77,7 +80,7 @@ useEventListener('click', () => setCount(v => v + 1), ref)
 
 ## :bulb: useHover
 
-`useState` 和 `useEventListener` 的封装，监听 DOM 元素是否有鼠标悬停
+`useState` 和 `useEventListener` 的封装，可以监听 DOM 元素是否有鼠标悬停。
 
 ```js
 const h = useHover(r, {
@@ -92,7 +95,7 @@ const h = useHover(r, {
 
 ## :bulb: useInterval
 
-`setInterval` 的封装，每过一段时间内一直执行
+`setInterval` 的封装，每过一段时间执行一次函数。
 
 
 ```js
@@ -103,7 +106,10 @@ useInterval(() => {
 
 ## :bulb: useLatest
 
-`useRef` 的封装，可以拿到最新值。好处：可以随时确保获取的是最新值，并且也可以解决闭包问题
+`useRef` 的封装，可以拿到最新值。
+<br/>
+
+好处：可以随时确保获取的是最新值，并且也可以解决闭包问题。
 
 
 ```js
@@ -113,7 +119,6 @@ const fnRef = useLatest(fn)
 ## :bulb: useMount
 
 `useEffect` 的封装，实现 `componentDidMount` 功能。
-
 
 ```js
 useMount(() => {
