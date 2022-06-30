@@ -1,6 +1,5 @@
 // 监听各种事件 （如：监听点击事件、键盘事件、滚动事件等，就是在addEventListener的基础上进行封装）
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import useLatest from '../useLatest';
 import useUnmount from '../useUnmount';
 

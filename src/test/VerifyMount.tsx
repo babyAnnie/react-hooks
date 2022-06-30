@@ -1,5 +1,5 @@
 import { Button, Toast } from 'antd-mobile';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useMount from '../components/useMount';
 import useUnmount from '../components/useUnmount'
 

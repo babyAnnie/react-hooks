@@ -1,5 +1,4 @@
 import { Button } from 'antd-mobile';
-import React from 'react';
 import useReactive from '../components/useReactive'
 
 const Index = (props) => {
